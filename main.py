@@ -73,14 +73,14 @@ class Simulation:
 
 	#remove the comments from the code below to enable randomised mode
 	def decrease_angle(self):
-		'''if random.randint(0, 3) == 0:
-			self.angle_constant = -self.angle_constant'''
+		#if random.randint(0, 3) == 0:
+			#self.angle_constant = -self.angle_constant
 		self.angle -= self.angle_constant
 		#self.angle_constant+=0.1
 
 
 	def get_pos(self):
-		return (self.x, self.y)
+		return self.x, self.y
 
 
 	def get_seed_rect(self):
