@@ -2,6 +2,7 @@ import pygame,math,random
 
 pygame.init()
 
+
 class Window:
 	
 	def __init__(self, w=420, h=360):
@@ -43,7 +44,6 @@ class Simulation:
 		self.width, self.height = 3, 3
 		self.seed = (self.x, self.y, self.width, self.height)
 		self.angle_constant = (3 - math.sqrt(5)) * 180
-		#(3 - math.sqrt(5)) * 180
 
 
 	def end_simulation(self):
