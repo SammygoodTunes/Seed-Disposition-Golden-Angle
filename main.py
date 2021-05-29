@@ -1,4 +1,10 @@
-import pygame,math,random,os
+'''
+Title: Seed-Disposition-Golden-Angle
+Author: SammygoodTunes
+Version: 1.0
+'''
+
+import pygame, math, random, os
 
 pygame.init()
 
