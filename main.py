@@ -1,4 +1,4 @@
-import pygame,math,random
+import pygame,math,random,os
 
 pygame.init()
 
@@ -7,8 +7,25 @@ class Window:
 	
 	def __init__(self, w=420, h=360):
 		self.w, self.h = w, h
-		self.screen = pygame.display.set_mode([self.w, self.h], pygame.RESIZABLE)
+		self.screen = pygame.display.set_mode([self.w, self.h])
 		self.clock = pygame.time.Clock()
+		self.screenshot = pygame.Rect(0, 0, self.w, self.h)
+
+	def take_screenshot(self):
+		sub = self.screen.subsurface(self.screenshot)
+		saved = False
+		i = 0
+		if not os.path.exists("screenshots"):
+			os.mkdir("screenshots")
+			print("made folder")
+		while not saved:
+			if os.path.isfile("screenshots/screenshot_" + str(i) + ".png"):
+				i += 1
+			else:
+				saved = True
+				name = "screenshot_" + str(i) + ".png"
+				pygame.image.save(sub, "screenshots/" + name)
+				print("Saved screenshot to /screenshots/" + name)		
 
 
 	def get_width(self):
@@ -73,11 +90,10 @@ class Simulation:
 
 	#remove the comments from the code below to enable randomised mode
 	def decrease_angle(self):
-		#if random.randint(0, 3) == 0:
-			#self.angle_constant = -self.angle_constant
+		if random.randint(0, 5) == 0:
+			self.angle_constant = -self.angle_constant
 		self.angle -= self.angle_constant
-		#self.angle_constant+=0.1
-
+		self.angle_constant+=0.05
 
 	def get_pos(self):
 		return self.x, self.y
@@ -117,7 +133,7 @@ def main():
 					pass
 
 				if e.key == pygame.K_ESCAPE:
-					pass
+					win.take_screenshot()
 
 		pygame.display.flip()
 		win.clock.tick(60)
