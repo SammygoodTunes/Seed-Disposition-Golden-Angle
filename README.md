@@ -25,7 +25,7 @@ This number is then used to angle each seed around the center of the sunflower, 
 Controls:
 ===================
 
-None
+[Escape] -> Take screenshot (Saved to /screenshots/)
 
 
 Installation information:
