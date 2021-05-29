@@ -96,10 +96,10 @@ class Simulation:
 
 	#remove the comments from the code below to enable randomised mode
 	def decrease_angle(self):
-		if random.randint(0, 5) == 0:
-			self.angle_constant = -self.angle_constant
+		#if random.randint(0, 5) == 0:
+			#self.angle_constant = -self.angle_constant
 		self.angle -= self.angle_constant
-		self.angle_constant+=0.05
+		#self.angle_constant+=0.05
 
 	def get_pos(self):
 		return self.x, self.y
