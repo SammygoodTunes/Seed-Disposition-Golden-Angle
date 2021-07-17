@@ -1,8 +1,7 @@
 # Seed-Disposition-Golden-Angle
-Simulation of the natural disposition of seeds on sunflowers by the Golden Angle
+Simulation of the natural disposition of seeds on sunflowers utilising the Golden Angle
 
-Explanation:
-===================
+## Explanation:
 
 In nature, the phyllotaxis of plants are quite interesting.
 
@@ -22,14 +21,12 @@ The Golden Angle is calculated by multiplying (3 - sqrt(5)) by 180, giving us an
 This number is then used to angle each seed around the center of the sunflower, and its distance will perform an outwards motion (increasing distance from the center), thus obtaining a very similar disposition of how sunflower seeds are positioned naturally.
 
 
-Controls:
-===================
+## Controls:
 
 [Escape] -> Take screenshot (Saved to /screenshots/)
 
 
-Installation information:
-===================
+## Installation information:
 
 A "requirements" text file is provided within the repository.
 
@@ -45,8 +42,7 @@ To install the necessary library(ies) to run the script:
 3- Install the library(ies) from the "requirements.txt" file (pip install -r requirements.txt)
 
 
-Development information:
-===================
+## Development information:
 
 Developed by: SammygoodTunes
 
