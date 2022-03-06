@@ -39,7 +39,10 @@ To install the necessary library(ies) to run the script:
 2- Change the current directory to the project path (cd path\\to\\project)
 
 
-3- Install the library(ies) from the "requirements.txt" file (pip install -r requirements.txt)
+3- Install the library(ies) from the "requirements.txt" file using:
+  ```
+  pip install -r requirements.txt
+  ```
 
 
 ## Development information:
